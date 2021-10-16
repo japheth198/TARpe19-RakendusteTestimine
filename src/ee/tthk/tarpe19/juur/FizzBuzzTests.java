@@ -1,5 +1,6 @@
 package ee.tthk.tarpe19.juur;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
@@ -31,5 +32,11 @@ class FizzBuzzTests {
 	void shouldReturnFizzForMultipleOfFive() {
 		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Buzz", fb.convert(5)); 
+	}
+	
+	@Test
+	void shouldReturnFizzForMultipleOfFiveAndThree() {
+		FizzBuzz fb=new FizzBuzz();
+		assertEquals("FizzBuzz", fb.convert(5),(3)); 
 	}
 }
