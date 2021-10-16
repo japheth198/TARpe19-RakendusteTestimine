@@ -21,5 +21,9 @@ class FizzBuzzTests {
 		FizzBuzz fb=new FizzBuzz();
 		assertEquals(100, fb.getNumbers().length);
 	}
-
+	@Test
+	void shouldReturnFizzForMultipleOfThree() {
+		FizzBuzz fb=new FizzBuzz();
+		assertEquals("Fizz", fb.convert(3)); 
+	}
 }
