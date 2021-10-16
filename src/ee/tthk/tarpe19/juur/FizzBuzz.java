@@ -7,7 +7,10 @@ public class FizzBuzz {
 	}
 
 	public Object convert(int i) {
-		// TODO Auto-generated method stub
-		return null;
+		if (i % 3 == 0) {
+			return "Fizz";
+		}
+		return i;
+		
 	}
 }
