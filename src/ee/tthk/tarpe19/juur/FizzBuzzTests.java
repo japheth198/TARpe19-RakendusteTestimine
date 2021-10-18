@@ -44,7 +44,7 @@ class FizzBuzzTests {
 		}	
 	}
 		
-	/*@Test
+	@Test
 	void shouldReturnFizzForNumbersDividibleBy5() {
 		String[] actual = fb.getNumbers();
 		for (int i = 0; i < expected1_100.length; i++) {
@@ -55,7 +55,7 @@ class FizzBuzzTests {
 		}
 	}
 	
-	@Test
+	/*@Test
 	void shouldReturnFizzForNumbersDividibleBy5or3() {
 		String[] actual = fb.getNumbers();
 		for (int i = 0; i < expected1_100.length; i++) {
