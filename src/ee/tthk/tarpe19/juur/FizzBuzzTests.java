@@ -12,9 +12,14 @@ import org.junit.jupiter.api.Test;
 class FizzBuzzTests {
 
 	private FizzBuzz fb;
+	private String [] expected1_100;
 	@BeforeEach
 	void setUp() throws Exception {
 		fb = new FizzBuzz();
+		expected1_100 = (String[])IntStream
+				.range(1, 101)
+				.mapToObj(String::valueOf)
+				.toArray(String[]::new);
 	}
 
 	@AfterEach
@@ -27,23 +32,13 @@ class FizzBuzzTests {
 	}
 	
 	@Test
-	void shouldReturnNumbers1_100() {
-		int [] expected = IntStream.range(1, 101).toArray();
-		assertEquals(expected, fb.getNumbers());
+	void shouldReturnFizzForNumbersDividibleBy3() {
+		String[] actual = fb.getNumbers();
+		for (int i = 0; i < expected1_100.length; i++) {
+			if(Integer.valueOf(expected1_100[i])%3==0) {
+				assertEquals("Fizz", actual[i]);
+			}
+		}
 	}
 	
-	@Test
-	void shouldReturnFizzForMultipleOfThree() {
-		assertEquals("Fizz", fb.convert(3)); 
-	}
-	
-	@Test
-	void shouldReturnFizzForMultipleOfFive() {
-		assertEquals("Buzz", fb.convert(5)); 
-	}
-	
-	@Test
-	void shouldReturnFizzForMultipleOfFiveAndThree() {
-		assertEquals("FizzBuzz", fb.convert(15)); 
-	}
 }
