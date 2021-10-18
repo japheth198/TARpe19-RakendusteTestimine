@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 class FizzBuzzTests {
 
 	private FizzBuzz fb;
-	private String [] expected1_100;
+	String[] expected1_100;
 	@BeforeEach
 	void setUp() throws Exception {
 		fb = new FizzBuzz();
@@ -31,14 +31,39 @@ class FizzBuzzTests {
 		assertEquals(100, fb.getNumbers().length);
 	}
 	
+	
+	
 	@Test
 	void shouldReturnFizzForNumbersDividibleBy3() {
 		String[] actual = fb.getNumbers();
 		for (int i = 0; i < expected1_100.length; i++) {
-			if(Integer.valueOf(expected1_100[i])%3==0) {
+			if(Integer.valueOf(expected1_100[i]) % 3 == 0 &&
+					Integer.valueOf(expected1_100[i]) % 5 != 0) {
 				assertEquals("Fizz", actual[i]);
+			}
+		}	
+	}
+		
+	/*@Test
+	void shouldReturnFizzForNumbersDividibleBy5() {
+		String[] actual = fb.getNumbers();
+		for (int i = 0; i < expected1_100.length; i++) {
+			if(Integer.valueOf(expected1_100[i]) % 5 == 0 && 
+					Integer.valueOf(expected1_100[i]) % 3 != 0) {
+				assertEquals("Buzz", actual[i]);
 			}
 		}
 	}
+	
+	@Test
+	void shouldReturnFizzForNumbersDividibleBy5or3() {
+		String[] actual = fb.getNumbers();
+		for (int i = 0; i < expected1_100.length; i++) {
+			if(Integer.valueOf(expected1_100[i]) % 5 == 0 && 
+					Integer.valueOf(expected1_100[i]) % 3 == 0) {
+				assertEquals("FizzBuzz", actual[i]);
+			}
+		}
+	}*/
 	
 }
