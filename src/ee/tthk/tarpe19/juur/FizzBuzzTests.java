@@ -3,6 +3,8 @@ package ee.tthk.tarpe19.juur;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.stream.IntStream;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,6 +25,13 @@ class FizzBuzzTests {
 	void shouldReturnOneHundredNumbers() {
 		assertEquals(100, fb.getNumbers().length);
 	}
+	
+	@Test
+	void shouldReturnNumbers1_100() {
+		int [] expected = IntStream.range(1, 101).toArray();
+		assertEquals(expected, fb.getNumbers());
+	}
+	
 	@Test
 	void shouldReturnFizzForMultipleOfThree() {
 		assertEquals("Fizz", fb.convert(3)); 
