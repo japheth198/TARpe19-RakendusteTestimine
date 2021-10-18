@@ -17,9 +17,9 @@ public class FizzBuzz {
 	
 	private String getFizzBuzz(int number) {
 		/*if (number%5==0 && number%3==0) 
-			return "FizzBuzz";
+			return "FizzBuzz";*/
 		if (number%5==0) 
-			return "Buzz";*/
+			return "Buzz";
 		if (number%3==0) 
 			return "Fizz";
 		return String.valueOf(number);
