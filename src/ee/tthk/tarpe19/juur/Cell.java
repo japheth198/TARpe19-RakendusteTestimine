@@ -1,8 +1,8 @@
 package ee.tthk.tarpe19.juur;
 
-public class GameOfLife {
+public class Cell {
 
-	public Cell createCell(CellState state) {
+	public Object getState() {
 		// TODO Auto-generated method stub
 		return null;
 	}
