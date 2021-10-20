@@ -22,5 +22,12 @@ class GameOfLifeTests {
 		Cell actual = gol.createCell(CellState.LIVING);
 		assertEquals(CellState.LIVING, actual.getState());
 	}
+	
+	@Test
+	void createDeadCell() {
+		GameOfLife gol = new GameOfLife();
+		Cell actual = gol.createCell(CellState.DEAD);
+		assertEquals(CellState.DEAD, actual.getState());
+	}
 
 }
