@@ -10,5 +10,6 @@ public class GameOfLife {
 		actual.state(state);
 		return actual;
 	}
+	
 
 }

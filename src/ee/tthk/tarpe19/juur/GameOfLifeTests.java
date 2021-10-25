@@ -26,14 +26,14 @@ class GameOfLifeTests {
 		assertEquals(CellState.LIVING, actual.getState());
 	}
 	
-	/*@Test
+	@Test
 	void createDeadCell() {
 		GameOfLife gol = new GameOfLife();
 		Cell actual = gol.createCell(CellState.DEAD);
 		assertEquals(CellState.DEAD, actual.getState());
 	}
 	
-	@Test
+	/*@Test
 	void createRandomCell() {
 		GameOfLife gol = new GameOfLife();
 		List<Cell> created = new ArrayList<>();
