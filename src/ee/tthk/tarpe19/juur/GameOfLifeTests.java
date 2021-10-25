@@ -76,13 +76,13 @@ class GameOfLifeTests {
 		assertEquals(CellState.DEAD, actual.getState());
 	}
 	
-	/*@Test
+	@Test
 	public void DeadCellWithThreeNeighboursBecomesAlive() {
 		GameOfLife gol = new GameOfLife();
 		Cell actual = gol.createCell(CellState.DEAD);
 		actual.addNeighbours(3);
 		if(actual.getNeighbours() == 3 && actual.getState() == CellState.DEAD) actual.state(CellState.LIVING);
 		assertEquals(CellState.LIVING, actual.getState());
-	}*/
+	}
 	
 }

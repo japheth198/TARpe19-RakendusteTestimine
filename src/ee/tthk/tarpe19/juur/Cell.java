@@ -12,11 +12,11 @@ public class Cell {
 		return state;
 	}
 	
-	public void addNeighbours(int num) {
+	/*public void addNeighbours(int num) {
 		this.num = num;
 	}
 	public int getNeighbours() {
 		return num;
-	}
+	}*/
 
 }
