@@ -9,19 +9,15 @@ public class Cell {
 		this.state = state;
 	}
 	
-	public void addNeighbours(int num) {
+	/*public void addNeighbours(int num) {
 		this.num = num;
-	}
+	}*/
 	
 	public CellState getState() {
 		return state;
 	}
 	
-	public int getNeighbours() {
+	/*public int getNeighbours() {
 		return num;
-	}
-
-	
-
-	
+	}*/
 }
