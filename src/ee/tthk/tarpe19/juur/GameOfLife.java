@@ -10,5 +10,10 @@ public class GameOfLife {
 		actual.state(state);
 		return actual;
 	}
+	
+	public Cell createCell() {
+		actual.state(CellState.values()[new Random().nextInt(CellState.values().length)]);
+		return actual;
+	}
 
 }
