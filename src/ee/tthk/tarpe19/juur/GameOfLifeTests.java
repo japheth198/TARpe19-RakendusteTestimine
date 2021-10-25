@@ -33,7 +33,7 @@ class GameOfLifeTests {
 		assertEquals(CellState.DEAD, actual.getState());
 	}
 	
-	/*@Test
+	@Test
 	void createRandomCell() {
 		GameOfLife gol = new GameOfLife();
 		List<Cell> created = new ArrayList<>();
@@ -48,6 +48,6 @@ class GameOfLifeTests {
 		}
 		assertTrue(living && dead);
 		
-	}*/
+	}
 
 }
