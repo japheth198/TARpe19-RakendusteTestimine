@@ -47,7 +47,15 @@ class GameOfLifeTests {
 				dead=true;
 		}
 		assertTrue(living && dead);
-		
+	}
+	
+	@Test
+	public void LivingCellWithLessThanTwoNeighboursDies() {
+		GameOfLife gol = new GameOfLife();
+		Cell actual = gol.createCell(CellState.LIVING);
+		actual.addNeighbours(1);
+		if(actual.getNeighbours() < 2) actual.state(CellState.DEAD);
+		assertEquals(CellState.DEAD, actual.getState());
 	}
 
 }
