@@ -13,6 +13,7 @@ public class Cell {
 		return state;
 	}
 
+	
 
 	
 }
