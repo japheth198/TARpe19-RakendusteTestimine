@@ -7,19 +7,28 @@ public class IpValidator {
 	public Boolean ValidateIpv4Address(String ipString) {
 		if(hasThreeDots(ipString) && 
 			hasFourNumbers(ipString) &&
-			numbersInRange0_255(ipString) &&
-			firstNumberInRange1_254(ipString)){
+			areNumbersInRange0_255(ipString) &&
+			isNumberInRange(getFirstNumber(ipString), 1, 254) &&
+			isNumberInRange(getLastNumber(ipString), 1, 254)){
 			return true;
 		}
 		return false;
 	}
-
-	private boolean firstNumberInRange1_254(String ipString) {
-		return getNumbers(ipString)[0]>0 &&
-				getNumbers(ipString)[0]<255;
+	
+	private int getLastNumber(String ipString) {
+		return getNumbers(ipString)[3];
 	}
 
-	private boolean numbersInRange0_255(String ipString) {
+	private int getFirstNumber(String ipString) {
+		return getNumbers(ipString)[0];
+	}
+
+	private boolean isNumberInRange(int number, int min, int max) {
+		return number >= min &&
+				number <= max;
+	}
+
+	private boolean areNumbersInRange0_255(String ipString) {
 		return Arrays.stream(getNumbers(ipString)).allMatch(nr-> nr>=0 && nr <=255);
 	}
 
